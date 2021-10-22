@@ -3,17 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc1008", "Mvc1008\Mvc1008.csproj", "{B1122A5E-B747-471C-9CED-F08826010C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc1008", "Mvc1008\Mvc1008.csproj", "{B1122A5E-B747-471C-9CED-F08826010C71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{69344E31-E0FA-4737-98C6-D3A80EC07B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{177D7B65-C8A3-4D10-A9BF-C6A4415F4902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{177D7B65-C8A3-4D10-A9BF-C6A4415F4902}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication3", "WebApplication3\WebApplication3.csproj", "{02245D45-0A47-4C08-95E4-29772937A0BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication3", "WebApplication3\WebApplication3.csproj", "{02245D45-0A47-4C08-95E4-29772937A0BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcService1", "GrpcService1\GrpcService1.csproj", "{8F4894A4-4CFD-4CF6-BDA2-E9F4F839BDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService1", "GrpcService1\GrpcService1.csproj", "{8F4894A4-4CFD-4CF6-BDA2-E9F4F839BDAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorApp", "RazorApp\RazorApp.csproj", "{E13EF3A9-8E01-4B44-B3C6-DCC91B6726A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorApp", "RazorApp\RazorApp.csproj", "{E13EF3A9-8E01-4B44-B3C6-DCC91B6726A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api1", "Api1\Api1.csproj", "{0C6963FF-641E-4CEA-85ED-976FC48813E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{574FD577-0C96-4C7D-AAB0-77AB20DDD2E4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +52,10 @@ Global
 		{E13EF3A9-8E01-4B44-B3C6-DCC91B6726A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E13EF3A9-8E01-4B44-B3C6-DCC91B6726A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E13EF3A9-8E01-4B44-B3C6-DCC91B6726A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C6963FF-641E-4CEA-85ED-976FC48813E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C6963FF-641E-4CEA-85ED-976FC48813E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C6963FF-641E-4CEA-85ED-976FC48813E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C6963FF-641E-4CEA-85ED-976FC48813E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

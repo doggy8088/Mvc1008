@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# API1002: Action documents status code that is not returned.
+dotnet_diagnostic.API1002.severity = suggestion
