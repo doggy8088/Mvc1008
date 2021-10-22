@@ -7,9 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Mvc1008.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Api1
@@ -26,6 +28,14 @@ namespace Api1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient();
+
+            services.AddSingleton<ApiClient>(x =>
+            {
+                return new ApiClient(
+                    "https://localhost:44335/",
+                    x.GetRequiredService<HttpClient>());
+            });
 
             services.AddControllers();
 

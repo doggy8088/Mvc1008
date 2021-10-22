@@ -21,14 +21,14 @@ namespace Mvc1008.Controllers
         }
 
         // GET: api/Dept
-        [HttpGet]
+        [HttpGet(Name = "GetDepts")]
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartment()
         {
             return await _context.Department.ToListAsync();
         }
 
         // GET: api/Dept/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetDeptById")]
         public async Task<ActionResult<Department>> GetDepartment(int id)
         {
             var department = await _context.Department.FindAsync(id);
@@ -43,7 +43,7 @@ namespace Mvc1008.Controllers
 
         // PUT: api/Dept/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("{id}", Name = "UpdateDeptById")]
         public async Task<IActionResult> PutDepartment(int id, Department department)
         {
             if (id != department.DepartmentId)
@@ -74,7 +74,7 @@ namespace Mvc1008.Controllers
 
         // POST: api/Dept
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
+        [HttpPost(Name = "CreateDept")]
         public async Task<ActionResult<Department>> PostDepartment(Department department)
         {
             _context.Department.Add(department);
@@ -84,7 +84,7 @@ namespace Mvc1008.Controllers
         }
 
         // DELETE: api/Dept/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}", Name = "DeleteDeptById")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
             var department = await _context.Department.FindAsync(id);

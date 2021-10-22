@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Mvc1008.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,12 @@ namespace Api1.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ApiClient api;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ApiClient api)
         {
             _logger = logger;
+            this.api = api;
         }
 
         [HttpGet]
@@ -54,6 +57,12 @@ namespace Api1.Controllers
             .ToArray();
 
             return data[id];
+        }
+
+        [HttpGet("depts")]
+        public async Task<IActionResult> GetDeptsAsync()
+        {
+            return Ok(await api.GetDeptsAsync());
         }
     }
 }
