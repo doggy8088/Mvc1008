@@ -1,10 +1,14 @@
 ﻿@page "/counter"
+@inject Microsoft.Extensions.Options.IOptions<MailerSettings> mailerSetting
 
 <h1>Counter</h1>
 
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+@mailerSetting.Value.Host
 
 @code {
     private int currentCount = 0;

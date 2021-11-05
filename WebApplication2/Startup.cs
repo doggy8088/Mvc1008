@@ -29,6 +29,10 @@ namespace WebApplication2
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            
+            services.Configure<MailerSettings>(Configuration.GetSection("Mailer"));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
